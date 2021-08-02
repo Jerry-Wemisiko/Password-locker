@@ -1,5 +1,6 @@
 import unittest
-from user import User
+from passwd import User
+from passwd import Credential
 
 class TestUser(unittest.TestCase):
     def setUp(self):
@@ -36,5 +37,37 @@ class TestUser(unittest.TestCase):
         self.new_user.delete_user()
         self.assertEqual(len(User.user_list),1)
 
-if __name__ == '__main__':
+    def test_display_user(self):
+
+        self.assertEqual(User.display_user(),User.user_list)
+
+class TestCredential(unittest.TestCase):
+    def setUp(self):
+
+        self.new_credential = Credential("Facebook","Skyles",45677)
+
+    def test__init__(self):
+
+        self.assertEqual(self.new_credential.site,"Facebook")
+        self.assertEqual(self.new_credential.username,"Skyles")
+        self.assertEqual(self.new_credential.password,45677)
+    
+    def test_save_credential(self):
+
+        self.new_credential.save_credentials()
+        self.assertEqual(len(Credential.credential_list),1)
+
+    def tearDown(self):
+
+        Credential.credential_list = []
+            
+        
+          
+          
+          
+          
+          
+          
+          
+if __name__ == "__main__":
     unittest.main()
