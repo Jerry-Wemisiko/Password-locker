@@ -69,9 +69,35 @@ class TestCredential(unittest.TestCase):
 
         self.assertEqual(len(Credential.credential_list),2)
 
-    def test_display_credential(self):
+    def test_display_credentials(self):
 
-        self.assertEqual(Credential.display_credential(),Credential.credential_list)
+        self.assertEqual(Credential.display_credentials(),Credential.credential_list)
+
+    def test_find_credential_by_username(self):
+
+        self.new_credential.save_credentials()
+        test_credential = Credential("Instagram","Jerry",3454546)
+        test_credential.save_credentials()
+
+        found_credential = Credential.find_by_username("Jerry")
+        self.assertEqual(found_credential.site,test_credential.site)
+
+    def test_credential_exist(self):
+
+        self.new_credential.save_credentials()
+        test_credential = Credential("Instagram","Jerry",3454546)
+        test_credential.save_credentials()
+
+        credential_exist =Credential.do_credential_exist("Instagram")
+        self.assertTrue(credential_exist)
+
+    
+
+    
+
+
+
+
 
     
             

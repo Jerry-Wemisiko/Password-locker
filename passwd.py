@@ -1,5 +1,6 @@
 import string
 from random import*
+from typing import ClassVar
 
 class User:
     '''
@@ -51,9 +52,23 @@ class Credential:
         Credential.credential_list.remove(self)  
     
     @classmethod
-    def display_credential(cls):
-        
+    def display_credentials(cls):
+
         return cls.credential_list
+
+    @classmethod
+    def find_by_username(cls,number):
+
+        for credential in cls.credential_list:
+            if credential.username == number:
+                return credential
+
+    @classmethod
+    def do_credential_exist(cls,number):
+        for credential in cls.credential_list:
+            if credential.site == number:
+                return True
+        return False
 
     
     # def generate_password(s):
