@@ -1,3 +1,6 @@
+import string
+from random import*
+
 class User:
     '''
     Class that generates new instances of users
