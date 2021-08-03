@@ -48,4 +48,12 @@ class Credential:
 
     def delete_credential(self):
         
-        Credential.credential_list.remove(self)    
+        Credential.credential_list.remove(self)  
+    
+    @classmethod
+    def display_credential(cls):
+        
+        return cls.credential_list
+
+    
+    # def generate_password(s):

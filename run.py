@@ -8,11 +8,17 @@ def create_password(user_name,password):
     return new_user
 
 def save_user(user):
-    
+
     user.save_user()
 
 def delete_user(user):
 
     user.delete_user()
+
+def display_user():
+
+    return User.display_user()
+
+
 
 
