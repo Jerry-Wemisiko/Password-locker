@@ -5,6 +5,7 @@
 ## Description
 
  An interactive and  amazing application that will help us manage our passwords and even generate new passwords for us.
+ You will also save your credentials and access them anytime
 
 ## Setup/Installation Requirements
 
