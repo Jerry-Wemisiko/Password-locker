@@ -65,6 +65,7 @@ def main():
             while True:
                 print(" op -Create your password ,gp - generate password")
                 pref_password = input()
+                password = input()
                 if pref_password == 'op':
                     password = input("Enter your password")
                     break
@@ -91,7 +92,7 @@ def main():
                 print('\n')
 
     while True:
-        print("To access your account use the short codes:cc- create credential \n  dc- display credential \n fc -find credential \n gp-generate password\n dc- delete credential \n ex-exit the application ") 
+        print("To access your account use the short codes:\n cc- create credential \n  dc- display credential \n fc -find credential \n gp-generate password\n dc- delete credential \n ex-exit the application ") 
         short_code= input().lower() 
         print('\n')
 
@@ -172,11 +173,7 @@ if __name__=='__main__':
      main()
 
 
- # print("Insert credential for deletion")
-                         
-    # elif short_code == 'N':
-   #     print("Action cancelled succesfully")
-
+ 
 
 
 
