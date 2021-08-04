@@ -68,7 +68,7 @@ class Credential:
                 return True
         return False
 
-    def generate_password(strlength=9):
+    def generate_password(passlength=10):
 
         password = string.ascii_lowercase+ string.ascii_uppercase + string.digits
-        return "".join(random.choice(password)  for i in range(strlength))
+        return "".join(random.choice(password)  for i in range(passlength))
