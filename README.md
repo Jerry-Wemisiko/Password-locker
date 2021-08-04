@@ -1,6 +1,6 @@
 # Password-locker
 
-#### This is a website for Pizza-Palace   as my Week 2 Prep Independent Project at Moringa School
+#### This is a python application -Password Locker as my Week 3 Core Independent Project at Moringa School
 
 ## Description
 
