@@ -1,7 +1,5 @@
+import random
 import string
-from random import*
-from typing import ClassVar
-
 class User:
     '''
     Class that generates new instances of users
@@ -70,5 +68,7 @@ class Credential:
                 return True
         return False
 
-    
-    # def generate_password(s):
+    def generate_password(strlength=9):
+
+        password = string.ascii_lowercase+ string.ascii_uppercase + string.digits
+        return "".join(random.choice(password)  for i in range(strlength))

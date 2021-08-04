@@ -91,6 +91,16 @@ class TestCredential(unittest.TestCase):
         credential_exist =Credential.do_credential_exist("Instagram")
         self.assertTrue(credential_exist)
 
+    def test_delete_credentials(self):
+
+        self.new_credential.save_credentials
+        test_credential = Credential("Instagram","Jerry",3454546)
+        test_credential.save_credentials()
+        
+        self.new_credential.delete_credential()
+        self.assertEqual(len(Credential.credential_list),1)
+    
+
     
 
     
