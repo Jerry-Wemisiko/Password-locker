@@ -97,7 +97,7 @@ class TestCredential(unittest.TestCase):
         test_credential = Credential("Instagram","Jerry",3454546)
         test_credential.save_credentials()
         
-        self.new_credential.delete_credential()
+        self.new_credential.delete_credential
         self.assertEqual(len(Credential.credential_list),1)
     
 
