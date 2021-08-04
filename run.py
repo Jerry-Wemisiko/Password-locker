@@ -2,54 +2,87 @@
 from passwd import User
 from passwd import Credential
 def create_new_user(user_name,password):
+    '''
+    function that will create a new user
+    '''
 
     new_user = User(user_name,password)
     return new_user
 
 def save_user(user):
+    '''
+    function that will save a user
+    '''
 
     user.save_user()
 
 def delete_user(user):
+    '''
+    function to delete a saved user
+    '''
 
     user.delete_user()
 
-# def display_user():
+# def display_user():   //Unimportant
 
 #     return User.display_user()
 
 def login_user(user_name,password):
+    '''
+    function to enable a user to login
+    '''
 
     confirm_user = Credential.assert_user(user_name,password)
     return confirm_user
 
 def create_new_credential(site,username,password):
+    '''
+    function to create new credential
+    '''
 
     new_credential =Credential(site,username,password)
     return new_credential
 
 def save_credential(credentials):
+    '''
+    function to save new credential
+    '''
 
     credentials.save_credentials()
 
 def delete_credential(credentials):
+    '''
+    function to delete a saved credential
+    '''
 
     credentials.delete_credentials()
 
 def find_credential(username):
+    '''
+    function to track and trace a credential
+    '''
 
     return Credential.find_by_username(username)
 
 def generate_password():
+    '''
+    function to generate a credential
+    '''
 
     gen_passwd= Credential.generate_password()
     return gen_passwd
 
 def display_credentials():
+    '''
+    function to display a saved credential
+    '''
 
     return Credential.display_credentials()
 
 def check_existing_credential():
+    '''
+    function to check for an existing credential
+    '''
     return Credential.do_credential_exist
 
 def main():
@@ -167,7 +200,7 @@ def main():
          print("Bye")
         break
     else:
-        print("Enter input again")
+        print("Seems you have no selected input")
 
 if __name__=='__main__':
      main()

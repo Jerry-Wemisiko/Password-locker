@@ -11,7 +11,7 @@
 
 To access this project on your local files, you can clone it using these steps.
 Open your terminal.
-Use this command to clone `$ https://github.com/Jerry-Wemisiko/Password-locker.git
+Use this command to clone `$ git clone https://github.com/Jerry-Wemisiko/Password-locker.git
 This will clone the repository into your local folder
 
 ## Known Bugs
